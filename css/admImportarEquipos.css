@@ -1,0 +1,14 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    width: 270px;
+    text-align: center;
+}
+
+.tabla-container{
+    max-height: 300px;
+    overflow: auto;
+}

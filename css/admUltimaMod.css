@@ -1,0 +1,51 @@
+.card-container{
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 300px;
+    text-align: center;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabla{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--gris-2);
+    box-shadow: 0 2px 4px 1px var(--gris-2);
+}
+th{
+    padding: 15px 0 10px 0;
+    background-color: var(--gris-2);
+    text-transform: capitalize;
+}
+tr{
+    background-color: var(--color-card);
+    transition: 0.3s;
+}
+tbody tr:hover{
+    background-color: var(--violeta);
+    color: var(--color-card);
+}
+td{
+    padding: 10px 5px;
+}
+.fila-doc{
+    text-align: center;
+    margin: 5px 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.fila-link{
+    text-align: center;
+}

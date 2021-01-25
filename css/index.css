@@ -1,0 +1,139 @@
+:root{
+    --color-fondos: rgb(249,249,250);
+    --color-card: white;
+
+    --gris-2: rgb(235, 235, 240);
+    --gris-3: rgb(207, 205, 205);
+
+    --gris-oscuro: gray;
+    --gris-medio: rgb(170, 169, 169);
+
+    --color-nav: rgb(42, 24, 75);
+
+    --celeste:rgb(0, 176, 255);
+    --verde: rgb(0, 191, 166);
+    --fucsia: rgb(245, 0, 87);
+    --azul: rgb(83, 109, 254);
+    --naranja: rgb(249, 168, 38);
+    --violeta: rgb(108, 99, 255);
+}
+
+html, body, #main{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--color-fondos);
+    font-family: roboto;
+    letter-spacing: 1px;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main form ,.logo{
+    width: 96%;
+    max-width: 350px;
+    padding: 30px 0;
+    background-color: var(--color-card);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 var(--gris-oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: transparent;
+    box-shadow: none;
+}
+.logo img{
+    width: 100%;
+}
+.form-group{
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--gris-oscuro);
+}
+
+.form-group input{
+    outline: none;
+    padding: 5px 15px;
+    background-color: var(--color-fondos);
+    border: var(--gris-3) solid 1px;
+    border-radius: 2px;
+    font-size: 22px;
+    transition: 0.2s ease-in-out;
+}
+
+.form-group input:focus{
+    border: var(--celeste) solid 1px;
+    box-shadow: 0 0 3px 0 var(--celeste);
+}
+
+#btn-container{
+    display: block;
+    margin-top: 10px;
+}
+
+#btn-container button{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 12px 16px;
+    background: linear-gradient(to left, var(--violeta), var(--celeste));
+    border: none;
+    border-radius: 4px;
+    color: var(--color-fondos);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+#btn-container button:hover{
+    opacity: 0.9;
+    box-shadow: 0 2px 5px 1px var(--gris-medio);
+}
+
+.links{
+    width: 96%;
+    max-width: 350px;
+    height: 50px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: initial;
+}
+.links a{
+    text-decoration: none;
+    font-size: 14px;
+    color: gray;
+    margin-left: 35px;
+}
+
+span{
+    background-color: var(--color-card);
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border-left: red solid 3px;
+    box-shadow: 0 1px 2px 0 var(--gris-oscuro);
+    height: 50px;
+    width: 96%;
+    max-width: 346px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

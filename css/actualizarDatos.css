@@ -1,0 +1,59 @@
+/* reset, html, body, body::before tienen estilo en navbar.css */
+
+/* especifico de esta pagina */
+.main-container{
+    padding-bottom: 30px;
+}
+#form-datos{
+    margin-bottom: 40px;
+}
+
+/* animacion input:focus */
+.form-group{
+    position: relative;
+}
+.form-group::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    bottom: 7px;
+    background-color: var(--violeta);
+    box-shadow: 0 2px 2px 0 var(--violeta);
+    transition: .2s ease-in-out;
+}
+.form-group:focus-within::before{
+    width: 90%;
+}
+/* fin animacion input:focus */
+
+/* especifico de esta pagina */
+.final-group{
+    margin-bottom: 10px;
+}
+
+/* diferenciacion de los input readonly */
+.main-container input{
+    color: rgb(70, 70, 70);
+}
+.btn-leer{
+    color: var(--azul);
+}
+.check-container{
+    justify-content: center;
+    align-items: center;
+}
+
+/* modal condiciones */
+.form-card-container{
+    background-color: var(--color-card);
+    padding: 20px;
+    max-width: 800px;
+    max-height: 600px;
+    overflow: auto;
+    position: relative;
+}
+.btn-leer{
+    cursor: pointer;
+}

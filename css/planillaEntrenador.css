@@ -1,0 +1,41 @@
+p{
+    color: rgb(84, 84, 84);
+    padding: 10px 15px;
+}
+table{
+    font-size: 12px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--gris-medio);
+    box-shadow: 0 2px 4px 1px var(--gris-2);
+}
+tr{
+    background-color: var(--color-card);
+}
+th{
+    padding: 15px 0 10px 0;
+    background-color: var(--gris-2);
+}
+td{
+    padding: 10px 0;
+}
+.cantidad-jugadora{
+    width: 20px;
+    text-align: center;
+}
+.columna-tipo{
+    width: 45px;
+}
+.columna-nro{
+    width: 50px;
+}
+select{
+    width: 100%;
+    height: auto;
+    border: none;
+}
+.form-btn{
+    margin: 15px auto;
+}

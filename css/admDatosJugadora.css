@@ -1,0 +1,88 @@
+.btn-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-jugadora{
+    margin-top: 20px;
+}
+
+.input-oculto{
+    display: none;
+}
+
+.form-input{
+    position: relative;
+}
+.form-input::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    bottom: 7px;
+    background-color: var(--violeta);
+    box-shadow: 0 2px 2px 0 var(--violeta);
+    transition: .2s ease-in-out;
+}
+.form-input:focus-within::before{
+    width: 90%;
+}
+
+.ultimo-carnet{
+    text-align: center;
+}
+/* seccion de imagenes */
+    .input-dni-oculto{
+        display: none;
+    }
+
+    .check-container{
+        font-size: 14px;
+        width: 160px;
+    }
+    .check-ficha{
+        margin: auto;
+    }
+    .img-section{
+        width: 90%;
+        max-width: 840px;
+        margin: 20px auto;
+        padding: 0;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 var(--gris-oscuro);
+        background-color: var(--color-card);
+    }
+    
+    .img-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+        margin: 30px 10px;
+        padding-bottom: 30px;
+    }
+    
+    .img-card{
+        position: relative;
+        max-width: 250px;
+        padding: 20px 15px;
+        margin: 15px auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px var(--gris-oscuro);
+        background-color: var(--color-fondos);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-card span{
+        margin: 10px;
+    }
+
+    .btn-descargar{
+        margin: 10px 0;
+    }
+    .btn-subir{
+        margin-bottom: 20px;
+    }
+    /* fin seccion imagenes */

@@ -1,0 +1,49 @@
+.card-container{
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.group-links-responsable{
+    background-color: var(--gris-2);
+    display: flex;
+    justify-content: center;
+}
+
+/* *************************************** */
+/* seccion form modal */
+
+.form-card-container{
+    position: relative;
+    width: 90%;
+    max-width: 840px;
+    background-color: var(--color-card);
+    padding: 40px 15px 20px 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    margin: auto;
+    padding: 10px;
+    color: var(--gris-oscuro);
+}
+.form-card-container input{
+    color: rgb(70, 70, 70);
+}
+.form-card-container .form-group{
+    position: relative;
+}
+.form-card-container .form-group::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    bottom: 7px;
+    background-color: var(--violeta);
+    box-shadow: 0 2px 2px 0 var(--violeta);
+    transition: .2s ease-in-out;
+}
+.form-card-container .form-group:focus-within::before{
+    width: 90%;
+}
+#responsable{display: none;}

@@ -1,0 +1,15 @@
+.card-container{
+    text-align: center;
+}
+.mensaje-eliminar{
+    padding: 0 20px;
+}
+.btn-container{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-oculto{
+    display: none;
+}

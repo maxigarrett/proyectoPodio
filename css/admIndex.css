@@ -1,0 +1,109 @@
+/* ********************************************** */
+.links-nuevos-equipos{
+    background-color: white;
+    border-bottom: var(--gris-2) solid 1px;
+    padding: 0 0 10px 0;
+}
+
+/* selector equipo */
+.selector-equipo-container{
+    padding: 0 0 10px 0;
+}
+
+.form-selector{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.selector-equipo{
+    margin: 20px 0;
+    width: 290px;
+    background-color: var(--color-fondos);
+    color: var(--color-nav);
+    border: var(--gris-medio) solid 1px;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 8px 10px;
+}
+.selector-equipo:focus{
+    border: var(--azul) solid 2px;
+}
+.card-container{
+    margin: 10px 0;
+}
+.main-container{
+    padding-bottom: 0;
+}
+.group-links-equipo{
+    margin-bottom: 0;
+}
+.group-links{
+    justify-content: space-around;
+}
+/* sector preferencias */
+h3{
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    border-bottom: var(--gris-2) solid 2px;
+}
+.preferencias-container{
+    text-align: center;
+}
+.preferencias-group{
+    border: var(--gris-2) solid 3px;
+    background-color: var(--color-fondos);
+    border-radius: 4px;
+}
+.input-pref{
+    text-align: center;
+}
+
+/* tabla lista de buena fe */
+table{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--gris-2);
+    box-shadow: 0 2px 4px 1px var(--gris-2);
+}
+tr{
+    background-color: var(--color-card);
+    transition: 0.3s;
+}
+tbody tr:hover{
+    background-color: var(--violeta);
+    color: var(--color-card);
+}
+th{
+    padding: 15px 0 10px 0;
+    background-color: var(--gris-2);
+    text-transform: capitalize;
+}
+td{
+    padding: 10px 5px;
+}
+a{
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:hover{
+    color: white;
+}
+.col-dni, .col-carnet, th{
+    font-size: 14px;
+    text-align: center;
+}
+.confirmar-baja{
+    text-transform: uppercase;
+    color: orangered;
+}
+.confirmar-baja:hover{
+    font-weight: 700;
+    color: red;
+}

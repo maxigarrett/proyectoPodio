@@ -1,0 +1,41 @@
+.mensaje-info{
+    text-align: center;
+    margin: 10px;
+    color: var(--gris-oscuro);
+}
+
+.form-btn-container{
+    margin-bottom: 15px;
+}
+
+.form-input{
+    position: relative;
+}
+.form-input::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    bottom: 7px;
+    background-color: var(--violeta);
+    box-shadow: 0 2px 2px 0 var(--violeta);
+    transition: .2s ease-in-out;
+}
+.form-input:focus-within::before{
+    width: 90%;
+}
+
+.selector{
+    width: 90%;
+}
+
+.selector-container{
+    position: relative;
+}
+
+.selector-filtro{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}

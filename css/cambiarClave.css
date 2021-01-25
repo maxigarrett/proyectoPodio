@@ -1,0 +1,75 @@
+/* reset, html, body, body::before tienen estilo en navbar.css */
+
+/* este form es diferente a los otros */
+.main-container{
+    padding-bottom: 30px;
+}
+form{
+    width: 90%;
+    max-width: 350px;
+    margin: auto;
+}
+
+.form-group input{
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 8px 0 5px 0;
+    font-size: 22px;
+    color: rgb(70,70,70);
+    background-color: var(--color-fondos);
+    border: var(--gris-3) solid 1px;
+    transition: 0.2s ease-in-out;
+}
+
+.form-group input:focus{
+    border: var(--celeste) solid 1px;
+    box-shadow: 0 0 3px 0 var(--celeste);
+}
+
+#cambiarClave-btn-container{
+    display: block;
+    margin-top: 10px;
+}
+#cambiarClave-btn-container button{
+    width: 100%;
+}
+
+/* mensaje de error al intentar
+    cambiar la contraseña */
+#errores{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: red solid 4px;
+    border-radius: 4px;
+    background-color: rgba(220,10,10,0.1);
+    position: relative;
+}
+#cerrar-error, #cerrar-confirmacion{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+#cerrar-error{
+    color: red;
+}
+#cerrar-confirmacion{
+    color: green;
+}
+
+/* mensaje de confirmacion de cambio
+    de contraseña */
+#confirmacion{
+    border-left: green solid 4px;
+    border-radius: 4px;
+    background-color: rgba(0, 128, 0, 0.342);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}

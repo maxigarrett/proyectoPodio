@@ -1,0 +1,412 @@
+/* 
+    en este css se establece estilo de navbar y, aprovechando que
+    se incluye en todas las paginas, tambien los estilos de partes
+    comunes del sitio como los colores, reseteo de paginas,
+    configuracion de html y body, contenedores principales que
+    se usan para el diseño general, botones, inputs, 
+*/
+
+:root{
+    --color-fondos: rgb(249,249,250);
+    --color-card: white;
+
+    --gris-2: rgb(235, 235, 240);
+    --gris-3: rgb(207, 205, 205);
+
+    --gris-oscuro: gray;
+    --gris-medio: rgb(170, 169, 169);
+
+    --color-nav: rgb(42, 24, 75);
+
+    --celeste:rgb(0, 176, 255);
+    --verde: rgb(0, 191, 166);
+    --fucsia: rgb(245, 0, 87);
+    --azul: rgb(83, 109, 254);
+    --naranja: rgb(249, 168, 38);
+    --violeta: rgb(108, 99, 255);
+}
+
+/* ****************************************** */
+/* barra de navegacion */
+nav{
+    background-color: var(--color-nav);
+}
+.nav-container{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-container .brand img{
+    height: 60px;
+}
+
+/* boton hamburguesa */
+.burger-container{
+    display: none;
+}
+
+#burger{
+    height: 30px;
+    width: 45px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#burger .burger-line{
+    height: 3px;
+    width: 70%;
+    background-color: var(--color-fondos);
+    border-radius: 2px;
+}
+
+/* links barra de navegacion */
+.nav-links{
+    height: 100%;
+}
+
+ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container li{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-container .links{
+    text-decoration: none;
+    color: var(--azul);
+}
+
+.nav-container a{
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+/* animacion links */
+.links::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 50%;
+    bottom: -5px;
+    background-color: var(--azul);
+    transition: 0.2s ease-in-out;
+}
+.links:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+/* boton cerrar sesion */
+#logout{
+    text-decoration: none;
+    padding: 8px 18px;
+    font-weight: 500;
+    color: var(--fucsia);
+    border: var(--fucsia) solid 3px;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+}
+#logout:hover{
+    background-color: var(--fucsia);
+    color: var(--color-fondos);
+}
+
+
+/* media query navbar */
+@media (max-width: 850px) {
+
+    .burger-container{
+        display: block;
+        cursor: pointer;
+    }
+
+    #cerrarMenu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 20px;
+    }
+    #cerrarMenu-line1, #cerrarMenu-line2{
+        height: 4px;
+        border-radius: 2px;
+        width: 25px;
+        background-color: var(--color-fondos);
+    }
+    #cerrarMenu-line1{
+        transform: rotate(45deg) translate(1px, 5px);
+    }
+    #cerrarMenu-line2{
+        transform: rotate(-45deg) translate(-2px, -2px);
+    }
+
+    .nav-links{
+        display: block;
+        z-index: 1;
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        background-color:rgba(42,24,75,0.95);
+        transition: 0.4s ease-in-out;
+    }
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-links ul li{
+        margin: 25px 0 25px 0;
+        height: 30px;
+        width: 60%;
+    }
+    .nav-container .links{
+        color: var(--celeste);
+    }
+    .nav-links ul li a{
+        font-size: 20px;
+    }
+    #logout{
+        width: 80%;
+        text-align: center;
+        font-weight: bold;
+        color: var(--color-nav);
+        background-color: var(--fucsia);
+    }
+}
+
+/* *********************************** */
+/* reset general */
+/* fondo comun de las paginas */
+/* html, body, body::before */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+html, body{
+    box-sizing: initial;
+}
+body{
+    background-color: var(--color-fondos);
+}
+body::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: var(--color-nav);
+    z-index: -1;
+}
+
+/* ************************************** */
+/* estilo para los contenedores principales
+    (tarjetas) presentes en todas las paginas */
+    .main-container{
+        width: 90%;
+        max-width: 840px;
+        margin: 40px auto 30px auto;
+        padding-bottom: 0;
+        background-color: var(--color-card);
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 var(--gris-oscuro);
+        overflow: hidden;
+    }
+
+    /* ************************************** */
+    /* encabezado de contenedores principales */
+    h2{
+        background-color: var(--gris-2);
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        opacity: 0.9;
+        padding: 30px 0 30px 0;
+        margin-bottom: 20px;
+    }
+
+    /* **************************************** */
+    /* cuerpo efectivo de contenedor principal columnas
+        automaticas con grid (ejemplo, form de datos personales) */
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            align-items: center;
+            gap: 10px 10px;
+            margin-left: 10px;
+            margin-bottom: 40px;
+            padding: 10px 15px;
+        }
+
+    /* **************************************** */
+    /* botones de todas las paginas */
+    
+    /* contenedor de boton de formularios */
+    .form-btn-container{
+        text-align: center;
+    }
+
+    /* botones */
+.form-btn,
+.img-container button,
+.boton-guardar,
+#cambiarClave-btn-container button{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: transparent;
+
+    color: var(--azul);
+    font-size: 18px;
+
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.form-btn-container .form-btn{
+    padding: 10px 30px;
+}
+.img-container button{
+    width: 100%;
+}
+.form-btn:hover,
+.img-container button:hover,
+.boton-guardar:hover,
+#cambiarClave-btn-container button:hover{
+    color: rgb(68, 60, 218);
+    box-shadow: 0 2px 5px 0 var(--gris-medio);
+}
+
+/* ******************************************* */
+/* encabezado de las partes de los formularios */
+/* telefonos, datos de contacto, etc */
+.form-section-title{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 23px;
+    border-bottom: var(--gris-2) solid 1px;
+}
+
+/* ************************************ */
+/* etiquetas de inputs de formularios */
+label{
+    text-transform: capitalize;
+    display: block;
+    font-weight: 500;
+}
+
+/* ************************************ */
+/* inputs de formularios */
+input{
+    width: 90%;
+    outline: none;
+    border: none;
+    color: var(--gris-oscuro);
+    border-bottom: var(--gris-2) solid 1px;
+    background-color: transparent;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+/* *********************************** */
+/* formato comun para contenedor de checkbox */
+.check-container{
+    padding: 10px;
+    border: var(--gris-2) solid 1px;
+    background-color: var(--color-fondos);
+    border-radius: 4px;
+    display: flex;
+}
+
+/* *********************************** */
+/* formato gral paginas de responsables */
+.group-links-equipo{
+    padding: 20px 10px 20px 10px;
+    margin: 0;
+    background-color: var(--gris-2);
+    justify-content: space-around;
+    align-items: center;
+}
+.group-links{
+    display: flex;
+}
+.links-equipo{
+    width: 100%;
+    text-align: left;
+}
+
+/* *********************************** */
+/* parte comun de forms modales */
+#modal-container{
+    display: none;
+}
+.modal-form-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: modal 0.3s;
+}
+@keyframes modal{
+    from{transform: translateY(-100%);}
+    to{transform: translateY(0);}
+}
+/* boton para cerrar el modal */
+#btn-cerrar{
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 15px;
+}
+#cerrarModal-line1, #cerrarModal-line2{
+    height: 2px;
+    border-radius: 1px;
+    width: 21px;
+    background-color: rgb(64,64,64);
+}
+#cerrarModal-line1{
+    transform: rotate(45deg) translate(0,0);
+}
+#cerrarModal-line2{
+    transform: rotate(-45deg) translate(1px, -1px);
+}

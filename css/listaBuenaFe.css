@@ -1,0 +1,96 @@
+.card-container{
+    margin-bottom: 0;
+}
+/* ************************************************ */
+/* seccion tabla de buena fe */
+table{
+    font-size: 14px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--gris-2);
+    box-shadow: 0 2px 4px 1px var(--gris-2);
+}
+tr{
+    background-color: var(--color-card);
+}
+th{
+    padding: 15px 0 10px 0;
+    background-color: var(--gris-2);
+}
+td{
+    padding: 10px 15px;
+}
+.columna-dni{
+    text-align: right;
+}
+.columna-eliminar{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.columna-eliminar a{
+    padding: 0px;
+    display: flex;   
+}
+.btn-eliminar-jugadora{
+    width: 30px;
+}
+
+.main-container{
+    margin-bottom: 30px;
+}
+.btn-agregar-jugadora{
+    display: flex;
+    margin: auto;
+}
+
+/* ********************************** */
+/* seccion form modal */
+p{
+    margin: auto;
+    padding: 10px;
+    color: var(--gris-oscuro);
+}
+.form-card-container{
+    position: relative;
+    width: 90%;
+    max-width: 840px;
+    background-color: var(--color-fondos);
+    padding: 40px 15px 20px 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.form-card-container input{
+    color: rgb(70, 70, 70);
+}
+.form-card-container .form-group{
+    position: relative;
+}
+.form-card-container .form-group::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0;
+    border-radius: 2px;
+    bottom: 7px;
+    background-color: var(--violeta);
+    box-shadow: 0 2px 2px 0 var(--violeta);
+    transition: .2s ease-in-out;
+}
+.form-card-container .form-group:focus-within::before{
+    width: 90%;
+}
+.selector-container{
+    position: relative;
+}
+.sel{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    max-width: 80%;
+    min-height: 30px;
+}
